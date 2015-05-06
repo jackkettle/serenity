@@ -1,0 +1,162 @@
+section#body-container {
+	margin-left: @nav-width;
+	padding: 20px;
+	margin-top: 50px;
+	overflow: auto;
+	.transition;
+
+	.home-stats {
+		
+		.hvr-wobble-horizontal {
+			display: block;
+		}
+		a {
+			color: inherit;
+		}
+	}
+	.home-charts-middle {
+		
+		.chart-container {
+			background: white;
+			padding: 0px;
+			position: relative;
+			min-height: 305px;
+			.chart-comment {
+			    position: absolute;
+			    left: 50px;
+			    top: 10px;
+			    color: @brand-success;
+			    .comment-header {
+					font-weight: 600;
+					font-size: 23px;
+				}
+				.comment-comment {
+					font-size: 13px;
+				}
+			}
+			.c3 svg {
+				margin-left: -20px;
+				margin-top: 5px;
+			}		
+			.c3-axis-x text {
+				fill: white;
+			}
+			.c3-axis-y text {
+				fill: white;
+			}
+			.c3 path {
+				stroke: white;
+			}
+			.c3 line {
+				stroke: white;
+			}
+		}
+	}
+	.home-charts-right {
+	
+		.top-right-chart {
+			background: white;
+
+			.c3 svg {
+				margin-left: -18px;
+				margin-bottom: -33px;
+			}
+			.c3-axis-x text {
+				fill: none;
+			}
+			.c3-axis-y text {
+				fill: none;
+			}
+			.c3 path {
+				stroke: none;
+			}
+			.c3 line {
+				stroke: none;
+			}
+		}
+		.top-left-chart {
+			background: white;
+			margin-top: 12px;
+			text-align: center;
+			.c3-chart-arc text {
+				display: none;
+			} 
+		}
+	}
+	.piechart-container {
+		display: inline-block;
+		.chart1, .chart2, .chart3 {
+			background: white;
+			display: inline-block;
+			
+			width: 100%;
+			text-align: center;
+			.easypie {
+				padding: 7px;
+			}
+			.chart-header {				
+				height: 28px;
+				padding-top: 3px;
+				margin-bottom: 2px;
+				font-size: 15px;
+				font-weight: 600;
+			}
+		}
+		.chart1 {
+			.chart-header {
+				background: @brand-warning;
+				color: white;
+			}	
+		}
+		.chart2 {
+			.chart-header {
+				background: @brand-primary;
+				color: white;
+			}	
+		}
+		.chart3 {
+			.chart-header {
+				background: @brand-danger;
+				color: white;
+			}	
+		}
+	}
+	
+}
+
+
+@media (min-width: 1024px) {
+	.home-container {
+		margin: 0 -20px;
+		.home-row {
+			display: table;
+			min-width: 100%;
+			border-spacing: 20px 0;
+			margin: 0;
+
+			> [class*="col-"] {
+			 	display: table-cell;
+			 	float: none;
+			 	vertical-align: top;
+			 	padding: 0;
+			 	div {
+			 		border-spacing: 0;
+			 	}
+			}
+
+			&:before, &:after {
+				display: none !important;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.home-charts-right {
+		margin-top: 13px;
+		margin-bottom: 13px;
+	}
+	.todo-container {
+		margin-top: 13px;
+		margin-bottom: 13px;
+	}
+}	
